@@ -24,7 +24,7 @@ Expected output:
           "href": "http://api.groovehq.com/v1/tickets?customer=corentin.arboval%40acmehq.com"
         }
       },
-      "id": "8222992310",
+      "id": "8222994910",
       "type": "Customer",
       "email": "corentin.arboval@acmehq.com",
       "name": "corentin arboval",
@@ -41,40 +41,40 @@ Expected output:
       "custom": {},
       "avatar_url": "https://groovehq.com/avatars/original/missing.png"
     },
-  {
-    "href": "http://api.groovehq.com/v1/customers/jeanneitter@aol.com",
-    "links": {
-      "tickets": {
-        "href": "http://api.groovehq.com/v1/tickets?customer=jeanneitter%40aol.com"
-      }
-    },
-    "id": "2104090070",
-    "type": "Customer",
-    "email": "jeanneitter@aol.com",
-    "name": "jean neitter",
-    "first_name": "jean",
-    "last_name": "neitter",
-    "about": null,
-    "twitter_username": null,
-    "title": null,
-    "company_name": null,
-    "phone_number": null,
-    "location": null,
-    "website_url": null,
-    "linkedin_username": null,
-    "custom": {},
-    "avatar_url": "https://groovehq.com/avatars/original/missing.png"
-  }
+    {
+      "href": "http://api.groovehq.com/v1/customers/ericNeitter@aol.com",
+      "links": {
+        "tickets": {
+          "href": "http://api.groovehq.com/v1/tickets?customer=ericNeitter%40aol.com"
+        }
+      },
+      "id": "2104090070",
+      "type": "Customer",
+      "email": "ericNeitter@aol.com",
+      "name": "Eric Neitter",
+      "first_name": "Eric",
+      "last_name": "Neitter",
+      "about": null,
+      "twitter_username": null,
+      "title": null,
+      "company_name": null,
+      "phone_number": null,
+      "location": null,
+      "website_url": null,
+      "linkedin_username": null,
+      "custom": {},
+      "avatar_url": "https://groovehq.com/avatars/original/missing.png"
+    }
   ],
   "meta": {
     "pagination": {
       "current_page": 1,
-      "total_pages": 3,
+      "total_pages": 59,
       "total_count": 118,
       "next_page": "http://api.groovehq.com/v1/customers?page=2"
     }
   }
-
+}
 ```
 
 Other scripts take over to parse json key:value pairs and navigate to next pages.

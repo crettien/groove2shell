@@ -1,6 +1,7 @@
 # groove2shell
 A set of shell scripts to interact with Groove's api
 You need to install the jq package prior to using these scripts.
+
 __On OS X__ run:
 ```brew install jq.```
 
@@ -13,7 +14,7 @@ Get the most recent customers' list:
 ```./listing_customers.sh '{"page":1}'```
 
 Expected output:
-``{
+```{
   "customers": [
     {
       "href": "http://api.groovehq.com/v1/customers/corentin.arboval@acmehq.com",

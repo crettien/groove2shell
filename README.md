@@ -50,7 +50,7 @@ Expected output:
       },
       "id": "2104090070",
       "type": "Customer",
-      "email": "ericNeitter@aol.com",
+      "email": "ericneitter@aol.com",
       "name": "Eric Neitter",
       "first_name": "Eric",
       "last_name": "Neitter",
@@ -82,3 +82,9 @@ Other scripts take over to parse json key:value pairs and navigate to next pages
 You can pipe the output to refine your query, in the following one-liner you'll be able to extract the list of emails:
 
 ```./listing_customers.sh '{"page":1}' | jq '.customers[]|.email'```
+
+Should give:
+```
+"corentin.arboval@acmehq.com"
+"ericneitter@aol.com"
+``

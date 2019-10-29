@@ -3,7 +3,7 @@ A set of shell scripts to interact with Groove's api
 You need to install the jq package prior to using these scripts.
 
 __On OS X__ run:
-```brew install jq.```
+```brew install jq```
 
 __On Linux (Debian, Ubuntu)__ run:
 ```apt-get install jq```
@@ -49,7 +49,9 @@ Expected output:
       "next_page": "http://api.groovehq.com/v1/customers?page=2"
     }
   }
-}```
+}
+```json
+
 
 
 Other scripts take over to parse json key:value pairs and navigate to next pages.

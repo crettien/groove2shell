@@ -14,7 +14,8 @@ Get the most recent customers' list:
 ```./listing_customers.sh '{"page":1}'```
 
 Expected output:
-```{
+```json
+{
   "customers": [
     {
       "href": "http://api.groovehq.com/v1/customers/corentin.arboval@acmehq.com",
@@ -53,3 +54,7 @@ Expected output:
 ```
 
 Other scripts take over to parse json key:value pairs and navigate to next pages.
+
+You can pipe the output to refine your query, in the following one-liner you'll be able to extract the list of emails:
+
+`./listing_customers.sh '{"page":1}' | jq '.customers[]|.email'

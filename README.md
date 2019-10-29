@@ -40,7 +40,7 @@ Expected output:
       "custom": {},
       "avatar_url": "https://groovehq.com/avatars/original/missing.png"
     },
-    ...
+
   "meta": {
     "pagination": {
       "current_page": 1,
@@ -50,8 +50,6 @@ Expected output:
     }
   }
 }
-```json
-
-
+```
 
 Other scripts take over to parse json key:value pairs and navigate to next pages.

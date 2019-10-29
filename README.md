@@ -2,6 +2,14 @@
 A set of shell scripts to interact with Groove's api
 You need to install the jq package prior to using these scripts.
 
+Each script matches a Groove API and accept optional parameters.
+
+The paramaters are passed as a json string.
+
+Get the the API documentation [groove api](https://www.groovehq.com/docs/)
+
+###Prerequistes
+
 __On OS X__ run:
 ```brew install jq```
 

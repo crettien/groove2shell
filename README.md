@@ -65,7 +65,7 @@ Expected output:
     "custom": {},
     "avatar_url": "https://groovehq.com/avatars/original/missing.png"
   }
-  ]
+  ],
   "meta": {
     "pagination": {
       "current_page": 1,

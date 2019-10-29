@@ -50,6 +50,6 @@ Expected output:
     }
   }
 }
-```json
+```
 
 Other scripts take over to parse json key:value pairs and navigate to next pages.

@@ -24,6 +24,8 @@ do
     printf "\033[32m\t\tclosing ticket #$ticket\n\033[0m"
     ./close_ticket.sh $ticket
   done
+  printf "\033[33m\tPause 5 seconds...\n\033[0m\n"
+  sleep 5
 done
 
-printf "\033[34m* Closed all tickets on $total_pages pages.\n\033[0m\n
+printf "\033[34m* Closed all tickets on $total_pages pages.\n\033[0m\n"

@@ -1,4 +1,12 @@
 #!/bin/bash
+# Author: Christophe Rettien
+# Expected parameters: -
+# Optional parameters: page <integer>
+#                      per_page <integer>
+# Usage: ./api_messages_listing.sh
+#        ./api_messages_listing.sh '{"page":1}' #where 1 is a page number
+#        ./api_messages_listing.sh '{"per_page":50}' #where 50 is a number of messages to display per page
+#        ./api_messages_listing.sh '{"page":3,"per_page":30}'
 
 # initilization
 source groove_api_key.conf

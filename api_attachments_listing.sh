@@ -1,4 +1,8 @@
 #!/bin/bash
+# Author: Christophe Rettien
+# Expected parameters: message id <string>
+# Optional parameters: -
+# Usage: ./api_attachments_listing.sh '{"message":"1234567"}' #where 1234567 is a message id
 
 # initilization
 source groove_api_key.conf

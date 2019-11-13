@@ -1,4 +1,8 @@
 #!/bin/bash
+# Author: Christophe Rettien
+# Expected parameters: customer_id <string>
+# Optional parameters: -
+# Usage: ./customer_tickets_close.sh 1234567
 
 customer_id=$1
 
@@ -22,7 +26,7 @@ do
   for ticket in $tickets
   do
     printf "\033[32m\t\tclosing ticket #$ticket\n\033[0m"
-    ./close_ticket.sh $ticket
+    ./api_ticket_update_state.sh $ticket closed
   done
   printf "\033[33m\tPause 5 seconds...\n\033[0m\n"
   sleep 5

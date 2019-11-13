@@ -1,4 +1,8 @@
 #!/bin/bash
+# Author: Christophe Rettien
+# Expected parameters: -
+# Optional parameters: -
+# Usage: ./api_groups_listing.sh
 
 # initilization
 source groove_api_key.conf

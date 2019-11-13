@@ -1,4 +1,10 @@
 #!/bin/bash
+# Author: Christophe Rettien
+# Expected parameters: -
+# Optional parameters: mailbox id <string> or mailbox email address <string>
+# Usage: ./api_folders_listing.sh
+#        ./api_folders_listing.sh '{"mailbox":"1234567"}' #where 1234567 is a mailbox id
+#        ./api_folders_listing.sh '{"mailbox":"acme@company.com"}' #where acme@company.com is a mailbox email address
 
 # initilization
 source groove_api_key.conf

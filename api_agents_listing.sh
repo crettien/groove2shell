@@ -1,4 +1,10 @@
 #!/bin/bash
+# Author: Christophe Rettien
+# Expected parameters: -
+# Optional parameters: group id <string>
+# Usage: ./api_agents_listing.sh
+#        ./api_agents_listing.sh '{"group":"1234567"}' #where 1234567 is a group id
+
 
 # initilization
 source groove_api_key.conf

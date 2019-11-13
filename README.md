@@ -95,17 +95,17 @@ Output sample:
 ### API scripts
 The below scripts perform direct calls to the equivalent [groovehq api](https://www.groovehq.com/docs)
 
-  api\_agents\_listing.sh
-  api\_attachments\_listing.sh
-  api\_customer\_find.sh
-  api\_customers\_listing.sh
-  api\_folders\_listing.sh
-  api\_groups\_lisiting.sh
-  api\_mailboxes\_listing.sh
-  api\_messages\_listing.sh
-  api\_ticket\_update\_state.sh
-  api\_tickets\_count\_listing.sh
-  api\_tickets\_listing.sh
+1. api\_agents\_listing.sh
+2. api\_attachments\_listing.sh
+3. api\_customer\_find.sh
+4. api\_customers\_listing.sh
+5. api\_folders\_listing.sh
+6. api\_groups\_lisiting.sh
+7. api\_mailboxes\_listing.sh
+8. api\_messages\_listing.sh
+9. api\_ticket\_update\_state.sh
+10. api\_tickets\_count\_listing.sh
+11. api\_tickets\_listing.sh
 
 
 

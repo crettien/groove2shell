@@ -93,7 +93,7 @@ Output sample:
 ```
 
 ### API scripts
-The below scripts perform direct calls to underlying [groovehq api](https://www.groovehq.com/docs).
+The below scripts perform direct calls to underlying [groovehq api](https://www.groovehq.com/docs).<br>
 The scripts all include a help function to display expected parameters and usage, invoke help using the -h or --help
 parameter as in `./api_agents_listing.sh --help`
 
@@ -111,13 +111,17 @@ parameter as in `./api_agents_listing.sh --help`
 11. api\_tickets\_listing.sh
 
 ### Extended scripts
-The below scripts perform extra tasks not directly provided by the api<br>
+The below scripts perform extra tasks not directly provided by the api.<br>
 The scripts all include a help function to display expected parameters and usage, invoke help using the -h or --help
 parameter as in `./customer_tickets_close.sh --help`
 1. customer\_tickets\_close.sh
 2. customers\_find\_by\_name.sh
 3. customers\_find\_by\_name\_count.sh
 4. customers\_find\_by\_name\_count.sh
+
+### Some examples
+Extract a customer id given the customer's name `./customers_find_by_name.sh "John DOE" | ./customers_extract_id.sh`
+
 
 
 

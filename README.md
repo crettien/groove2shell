@@ -8,16 +8,13 @@ Get the the API documentation [groove api](https://www.groovehq.com/docs/)
 
 ### Prerequistes
 
-__On OS X__ run:
-```brew install jq```
+__On OS X__ run: `brew install jq`
 
-__On Linux (Debian, Ubuntu)__ run:
-```apt-get install jq```
+__On Linux (Debian, Ubuntu)__ run: `apt-get install jq`
 
 __Usage__
 
-Get the most recent customers' list:
-```./listing_customers.sh '{"page":1}'```
+Get the most recent customers' list: `./listing_customers.sh '{"page":1}'`
 
 Expected output:
 ```json
@@ -94,4 +91,6 @@ Should give:
 "corentin.arboval@acmehq.com"
 "ericneitter@aol.com"
 ```
+
+
 

@@ -16,6 +16,30 @@
 #        ./api_tickets_listing.sh '{"folder":"12345"}' #where 12345 is the folder to filter by
 #        ./api_tickets_listing.sh '{"assignee":"john.doe@company.com","state":"pending"}'
 
+function help() {
+  printf "\033[33m# HELP: api_tickets_listing\n\033[0m"
+  printf "\033[33m# Expected parameters:\t-\n\033[0m"
+  printf "\033[33m# Optional parameters:\tassignee email <string> agent email address or \"unassigned\"\n\033[0m"
+  printf "\033[33m# \t\t\tcustomer email or customer id <string> returns tickets belonging to the specified customer\n\033[0m"
+  printf "\033[33m# \t\t\tpage <integer> the page number\n\033[0m"
+  printf "\033[33m# \t\t\tper_page <integer> The number of messages to return per page (max 50)\n\033[0m"
+  printf "\033[33m# \t\t\tstate <string> returns tickets with the specified state only (\"unread\", \"opened\", \"pending\", \"closed\", \"spam\")\n\033[0m"
+  printf "\033[33m# \t\t\tfolder <integer> the ID of a folder to filter by\n\033[0m"
+  printf "\033[33m# Usage:\t\t./api_tickets_listing.sh\n\033[0m"
+  printf "\033[33m# \t\t\t./api_tickets_listing.sh '{\"assignee\":\"john.doe@company.com\"}' #where john.doe@company.com is an agent's email address\n\033[0m"
+  printf "\033[33m# \t\t\t./api_tickets_listing.sh '{\"customer\":\"acme@company.com\"}' #where acme@company.com is a company's email address\n\033[0m"
+  printf "\033[33m# \t\t\t./api_tickets_listing.sh '{\"page\":3}' #where 3 is the page to display\n\033[0m"
+  printf "\033[33m# \t\t\t./api_tickets_listing.sh '{\"per_page\":10}' #where 10 is the number of tickets to display per page\n\033[0m"
+  printf "\033[33m# \t\t\t./api_tickets_listing.sh '{\"state\":\"unread\"}' #where unread is the state to filter by\n\033[0m"
+  printf "\033[33m# \t\t\t./api_tickets_listing.sh '{\"folder\":\"12345\"}' #where 12345 is the folder to filter by\n\033[0m"
+  printf "\033[33m# \t\t\t./api_tickets_listing.sh '{\"assignee\":\"john.doe@company.com\",\"state\":\"pending\"}'\n\033[0m"
+}
+
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+  help
+  exit 0
+fi
+
 # initilization
 source groove_api_key.conf
 

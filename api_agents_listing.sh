@@ -5,6 +5,18 @@
 # Usage: ./api_agents_listing.sh
 #        ./api_agents_listing.sh '{"group":"1234567"}' #where 1234567 is a group id
 
+function help() {
+  printf "\033[33m# HELP: api_agents_listing\n\033[0m"
+  printf "\033[33m# Expected parameters:\t-\n\033[0m"
+  printf "\033[33m# Optional parameters:\tgroup id <string>\n\033[0m"
+  printf "\033[33m# Usage:\t\t./api_agents_listing.sh\n\033[0m"
+  printf "\033[33m# \t\t\t./api_agents_listing.sh '{\"group\":\"1234567\"}' #where 1234567 is a group id\n\033[0m"
+}
+
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+  help
+  exit 0
+fi
 
 # initilization
 source groove_api_key.conf

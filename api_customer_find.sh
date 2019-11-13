@@ -4,6 +4,18 @@
 # Optional parameters: -
 # Usage: ./api_customer_find.sh "acme@company.com" #where acme@company.com is an email address
 
+function help() {
+  printf "\033[33m# HELP: api_customer_find\n\033[0m"
+  printf "\033[33m# Expected parameters:\tcustomer email <string>\n\033[0m"
+  printf "\033[33m# Optional parameters:\t-\n\033[0m"
+  printf "\033[33m# Usage:\t\t./api_customer_find.sh \"acme@company.com\" #where acme@company.com is an email address\n\033[0m"
+}
+
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+  help
+  exit 0
+fi
+
 # initilization
 source groove_api_key.conf
 

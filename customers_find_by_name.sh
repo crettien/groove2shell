@@ -4,6 +4,18 @@
 # Optional parameters: -
 # Usage: ./customers_find_by_name.sh "John DOE"
 
+function help() {
+  printf "\033[33m# HELP: customers_find_by_name\n\033[0m"
+  printf "\033[33m# Expected parameters:\tcustomer name\n\033[0m"
+  printf "\033[33m# Optional parameters:\t-\n\033[0m"
+  printf "\033[33m# Usage:\t\t./customers_find_by_name.sh \"John DOE\"\n\033[0m"
+}
+
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+  help
+  exit 0
+fi
+
 if [ -z "$1" ]; then
   echo "missing customer name!"
   exit 2

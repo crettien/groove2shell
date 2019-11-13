@@ -4,6 +4,18 @@
 # Optional parameters: -
 # Usage: ./customer_tickets_close.sh 1234567
 
+function help() {
+  printf "\033[33m# HELP: customer_tickets_close\n\033[0m"
+  printf "\033[33m# Expected parameters:\tcustomer id <string>\n\033[0m"
+  printf "\033[33m# Optional parameters:\t-\n\033[0m"
+  printf "\033[33m# Usage:\t\t./customer_tickets_close.sh 1234567 #where 1234567 is a customer id\n\033[0m"
+}
+
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+  help
+  exit 0
+fi
+
 customer_id=$1
 
 # build the query

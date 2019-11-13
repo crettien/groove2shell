@@ -8,6 +8,22 @@
 #        ./api_customers_listing.sh '{"per_page":50}' #where 50 is a number of customers to display per page
 #        ./api_customers_listing.sh '{"page":3,"per_page":30}'
 
+function help() {
+  printf "\033[33m# HELP: api_customers_listing\n\033[0m"
+  printf "\033[33m# Expected parameters:\t-\n\033[0m"
+  printf "\033[33m# Optional parameters:\tpage <integer>\n\033[0m"
+  printf "\033[33m# \t\t\tper_page <integer>\n\033[0m"
+  printf "\033[33m# Usage:\t\t./api_customers_listing.sh\n\033[0m"
+  printf "\033[33m# \t\t\t./api_customers_listing.sh '{\"page\":1}' #where 1 is a page number\n\033[0m"
+  printf "\033[33m# \t\t\t./api_customers_listing.sh '{\"per_page\":50}' #where 50 is a number of customers to display per page\n\033[0m"
+  printf "\033[33m# \t\t\t./api_customers_listing.sh '{\"page\":1,\"per_page\":50}'\n\033[0m"
+}
+
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+  help
+  exit 0
+fi
+
 # initilization
 source groove_api_key.conf
 

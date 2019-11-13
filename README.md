@@ -86,11 +86,26 @@ You can pipe the output to refine your query, in the following one-liner you'll 
 
 ```./listing_customers.sh '{"page":1,"per_page":2}' | jq '.customers[]|.email'```
 
-Should give:
+Output sample:
 ```
 "corentin.arboval@acmehq.com"
 "ericneitter@aol.com"
 ```
+
+### API scripts
+The below scripts perform direct calls to the equivalent [groovehq api](https://www.groovehq.com/docs)
+
+  api\_agents\_listing.sh
+  api\_attachments\_listing.sh
+  api\_customer\_find.sh
+  api\_customers\_listing.sh
+  api\_folders\_listing.sh
+  api\_groups\_lisiting.sh
+  api\_mailboxes\_listing.sh
+  api\_messages\_listing.sh
+  api\_ticket\_update\_state.sh
+  api\_tickets\_count\_listing.sh
+  api\_tickets\_listing.sh
 
 
 

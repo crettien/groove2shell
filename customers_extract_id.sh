@@ -17,5 +17,5 @@ if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
 fi
 
 while read line; do
-  echo ${line} | grep '"id":' | cut -d':' -f2 | tr -d ', '
+  echo ${line} | grep '"id":' | cut -d':' -f2 | tr -d ', "'
 done < /dev/stdin

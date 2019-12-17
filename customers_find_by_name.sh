@@ -24,4 +24,11 @@ fi
 query=''
 
 printf -v  query "\"name\": \"$@\""
-./api_customers_listing.sh | grep -B 8 -A 8 -i "$query"
+
+for idx in {1..50}
+do
+  ./api_customers_listing.sh '{"page":'$idx'}' | grep -B 8 -A 8 -i "$query"
+  if [ $? -eq 0 ]; then
+    exit 0
+  fi
+done

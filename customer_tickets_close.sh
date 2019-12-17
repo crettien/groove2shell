@@ -24,8 +24,8 @@ if [ -z $customer_id ]; then
   exit 2
 fi
 
-current_page=`./listing_tickets.sh "{\"page\":1,\"customer\":$customer_id,\"state\":\"unread\"}" | grep current_page | cut -d':' -f2 | tr -d ', '`
-total_pages=`./listing_tickets.sh "{\"page\":1,\"customer\":$customer_id,\"state\":\"unread\"}" | grep total_pages | cut -d':' -f2 | tr -d ', '`
+current_page=`./api_tickets_listing.sh "{\"page\":1,\"customer\":$customer_id,\"state\":\"unread\"}" | grep current_page | cut -d':' -f2 | tr -d ', '`
+total_pages=`./api_tickets_listing.sh "{\"page\":1,\"customer\":$customer_id,\"state\":\"unread\"}" | grep total_pages | cut -d':' -f2 | tr -d ', '`
 
 printf "\033[34m* Tickets to close range from page $current_page to $total_pages\n\033[0m\n"
 
@@ -33,7 +33,7 @@ for (( page=current_page; page<=$total_pages; page++ ))
 do
   printf "\033[34m\tPage $page\n\033[0m\n"
 
-  tickets=`./listing_tickets.sh '{"page":1,"customer":2013998100,"state":"unread"}' | grep number | cut -d':' -f2 | tr -d ' ,'`
+  tickets=`./api_tickets_listing.sh '{"page":1,"customer":2013998100,"state":"unread"}' | grep number | cut -d':' -f2 | tr -d ' ,'`
 
   for ticket in $tickets
   do

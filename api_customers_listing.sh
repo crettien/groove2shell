@@ -44,5 +44,4 @@ if [ "x$per_page" != "xnull" ]; then
   printf -v query "$query""$separator""per_page=$per_page"
   separator='&'
 fi
-
 curl -s "https://api.groovehq.com/v1/customers/$query""$separator""access_token=$access_token" | jq
